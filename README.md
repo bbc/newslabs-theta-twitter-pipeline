@@ -2,7 +2,7 @@
 
 To be used at R1XTRA Bradford event.
 
-## Install
+## Install Python app
 
 * `pip install watchdog tweepy`
 * `sudo apt-get install imagemagick`
@@ -11,6 +11,16 @@ To be used at R1XTRA Bradford event.
 ## Run
 
 Run `monitor_additions.py [dir]`. As soon as an image (`.jpg`, can be changed) lands in the directory (optional), this image will be watermarked, resized, and sent to Twitter.
+
+## Install node app
+
+* `npm install`
+
+## Run node app
+
+* `npm start`
+* Go to `localhost:3000`
+* Ensure your Ricoh Theta is on and you are connected to it's wifi.
 
 # License
 

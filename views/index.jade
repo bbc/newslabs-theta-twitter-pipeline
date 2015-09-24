@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h2= title
+    if error
+        p error
+    if message 
+        p= message
+    if image
+        img(src="/images/#{image}", class="boothimage")
+    form#capture(name="capture",method="post",action="/")
+        br
+        button#btnSubmit(type="submit") Capture Image
+    form#publish(name="capture",method="post",action="/publish")
+        br
+        //input#image(type="hidden", value="#{image}", name="image")
+        input#image(type="hidden", value="tmp.jpg", name="image")
+        button#btnSubmit(type="submit") Publish Image
