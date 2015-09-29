@@ -15,7 +15,7 @@ router.post('/', function(req, res) {
     var theta = new Theta();
 
     theta.connect('192.168.1.1') 
-   
+
     theta.once('connect', function(){
         theta.capture(function(err){
             if(err) return console.error(err);
@@ -32,7 +32,7 @@ router.post('/', function(req, res) {
                 theta.disconnect();
                 
                 var deferred = Q.defer();
-                var imagemagickCommand = "convert ./public/images/tmp.jpg -resize 150% -virtual-pixel HorizontalTile -background White -rotate 180 -distort Polar 0 -crop 50%x100%+1344+0 ./public/images/tmp.jpg";
+                var imagemagickCommand = "convert ./public/images/tmp.jpg -resize 150% -virtual-pixel HorizontalTile -background Dark -rotate 180 -distort Polar 0 -crop 50%x100%+1344+0 ./public/images/tmp.jpg";
                 child = exec(imagemagickCommand, function (error, stdout, stderr) {
                     console.log("image converted to little planet");
                     if (error !== null || stderr.length > 0) {
