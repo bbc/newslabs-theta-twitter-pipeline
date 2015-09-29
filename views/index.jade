@@ -6,6 +6,9 @@ block content
         p error
     if message 
         p= message
+    if link 
+        a(href="#{link}") #{link}
+        br
     if image
         img(src="/images/#{image}", class="boothimage")
     form#capture(name="capture",method="post",action="/")

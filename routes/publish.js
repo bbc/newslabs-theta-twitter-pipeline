@@ -7,8 +7,9 @@ var express = require('express'),
 router.post('/', function(req, res) {
     utils.generateFileName("jpg")
     .then(function(filename){
-        fs.rename('./public/images/'+req.body.image, __dirname + '/../output/' + filename, function(err) {
-            return res.render('index', { title: '360 Photobooth', message: 'Image moved to publishing folder'});
+        fs.rename('./public/images/'+req.body.image, './public/images/output/' + filename, function(err) {
+            console.log('moved file to ','/images/output/"'+filename, 'or.. ', err);
+            return res.render('index', { title: '360 Photobooth', message: 'Image published', link: '/images/output/'+filename});
         });
     });
 });
