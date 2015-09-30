@@ -1,6 +1,4 @@
-# 360 selfie pipeline
-
-To be used at R1XTRA Bradford event.
+# 360 pipeline for publishing to Twitter from a Ricoh Theta
 
 ## Install Python app
 
@@ -14,11 +12,9 @@ To be used at R1XTRA Bradford event.
 
 * `npm install`
 
-## Run
+## Run python image handler
 
 Run `sh run.sh`. As soon as an image (`.jpg`, can be changed) lands in the directory (done by hitting "Publish" in the web app), this image will be watermarked, resized, and sent to Twitter.
-
-*Just make sure you're connected to the Theta wifi.*
 
 # License
 
